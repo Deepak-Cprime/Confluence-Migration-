@@ -1,0 +1,41 @@
+modules:
+  confluence:globalSettings:
+    - key: confluence-migration-hello-world-content-byline-item
+      resource: main
+      resolver:
+        function: resolver
+      title: "Confluence Migration "
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/4038a3f9-1f35-4a81-9f9d-9977ee01cf7b
+permissions:
+  external:
+    fetch:
+      backend:
+        - address: "*.atlassian.net"
+  scopes:
+    - write:folder:confluence
+    - write:space:confluence
+    - read:space:confluence
+    - read:page:confluence
+    - read:attachment:confluence
+    - read:comment:confluence
+    - write:page:confluence
+    - read:label:confluence
+    - write:label:confluence
+    - read:confluence-space.summary
+    - write:confluence-space
+    - read:confluence-content.all
+    - write:confluence-content
+    - read:confluence-content.summary
+    - write:confluence-file
+    - storage:app
