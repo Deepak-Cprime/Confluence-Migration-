@@ -1,8 +1,10 @@
-# Forge Hello World
+# Confluence Migration Tool
 
-This project contains a Forge app written in Javascript that displays `Hello World!` in Confluence global settings. 
+A comprehensive Atlassian Forge application for migrating Confluence spaces between instances with intelligent content handling, hierarchy preservation, and advanced error recovery mechanisms.
 
-See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
+## Architecture
+
+The application is structured into modular components. See the [Architecture Overview](docs/architecture-overview.md) for detailed documentation of all modules and their interactions.
 
 ## Requirements
 
